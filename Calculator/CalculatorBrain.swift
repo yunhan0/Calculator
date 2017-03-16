@@ -35,7 +35,6 @@ class CalculatorBrain {
         case Equals
     }
     
-    
     func performOperation(symbol: String) {
         if let operation = operations[symbol] {
             switch operation {
