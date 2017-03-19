@@ -8,10 +8,23 @@
 
 import UIKit
 
+var calculatorCount = 0
+
 class CalculatorViewController: UIViewController {
     @IBOutlet private weak var display: UILabel!
     
     private var userIsInTheMiddleOfTyping: Bool = false
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        calculatorCount += 1
+        print("Loaded up a new Calculator (count = \(calculatorCount))")
+    }
+    
+    deinit {
+        calculatorCount -= 1
+        print("Calculator left the heap (count = \(calculatorCount))")
+    }
     
     @IBAction private func touchDigit(_ sender: UIButton) {
         let digit = sender.currentTitle!
