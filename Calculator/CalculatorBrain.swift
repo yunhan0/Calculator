@@ -17,7 +17,7 @@ class CalculatorBrain {
     }
     
     var operations : Dictionary<String, Operation> = [
-        "π" : Operation.Constant(M_PI),
+        "π" : Operation.Constant(Double.pi),
         "e" : Operation.Constant(M_E),
         "√" : Operation.UnaryOperation(sqrt),
         "cos" : Operation.UnaryOperation(cos),
